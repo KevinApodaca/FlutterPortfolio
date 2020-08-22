@@ -65,9 +65,9 @@ class MyIntro extends StatelessWidget {
     return VStack(
       [
         [
-          "- Introduction".text.gray500.widest.sm.make(),
+          "- Introduction -".text.gray500.widest.sm.make(),
           10.heightBox,
-          "Developer | Thinker | Maker | Educator \nWeb Developer"
+          "Developer | Thinker | Maker | Educator \n\nI am a web developer studying Computer Science at the University of Texas at El Paso working as a software developer at JHU APL."
               .text
               .white
               .xl3
@@ -82,11 +82,11 @@ class MyIntro extends StatelessWidget {
           onPressed: () {
             launch("https://kevinapodaca.github.io");
           },
-          child: "Check out my site".text.make(),
+          child: "Check out my site".text.white.make(),
           color: Const.accentColor,
           shape: Vx.roundedSm,
           hoverColor: Vx.purple700,
-        ).h(50)
+        ).h(60)
       ],
       alignment: MainAxisAlignment.spaceEvenly,
     );
@@ -127,8 +127,8 @@ class SocialMedia extends StatelessWidget {
         launch('https://www.linkedin.com/in/kevinapodaca7/');
       }).make(),
       20.widthBox,
-      Icon(AntDesign.github, color: Colors.white).mdClick(() {
-        launch('https://github.com/KevinApodaca');
+      Icon(AntDesign.facebook_square, color: Colors.white).mdClick(() {
+        launch('https://www.facebook.com/kevin.apodaca.7');
       }).make(),
       20.widthBox,
     ].hStack();

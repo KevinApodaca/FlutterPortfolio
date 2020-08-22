@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../const.dart';
@@ -12,7 +13,7 @@ class Footer extends StatelessWidget {
         VxDevice(
           mobile: VStack(
             [
-              "Learn more\nContact Me".text.center.white.xl2.make(),
+              "Get in touch,\nContact me".text.center.white.xl2.make(),
               10.heightBox,
               "kevin.apodaca7@gmail.com"
                   .text
@@ -29,7 +30,7 @@ class Footer extends StatelessWidget {
           ),
           web: HStack(
             [
-              "Learn more\nContact Me".text.center.white.xl2.make(),
+              "Get in touch,\nContact me".text.center.white.xl2.make(),
               10.widthBox,
               "kevin.apodaca7@gmail.com"
                   .text
@@ -48,9 +49,13 @@ class Footer extends StatelessWidget {
         50.heightBox,
         MyAppBar(),
         10.heightBox,
-        "Thank you for viewing, ".richText.semiBold.white.withTextSpanChildren(
-            ["Copyright 2020.".textSpan.gray500.make()]).make(),
-        10.heightBox,
+        "Thank you for viewing ".richText.semiBold.white.withTextSpanChildren(
+            ["and take care.".textSpan.gray500.make()]).make(),
+        20.heightBox,
+        [
+          "Made with 💚  by Kevin Apodaca".text.blue500.make(),
+          10.widthBox,
+        ].hStack(crossAlignment: CrossAxisAlignment.center)
       ],
       crossAlignment: CrossAxisAlignment.center,
     ).wFull(context).p16();

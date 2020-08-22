@@ -9,11 +9,10 @@ class BodyScreen extends StatelessWidget {
       child: Flex(
         direction: context.isMobile ? Axis.vertical : Axis.horizontal,
         children: [
-          "Freelance Web Developer,\n"
+          "Some things I have done,\n"
               .richText
               .withTextSpanChildren(
-                ["Project showcase.".textSpan.yellow400.make()],
-              )
+                  ["Project showcase.".textSpan.yellow400.make()])
               .xl4
               .white
               .make(),
