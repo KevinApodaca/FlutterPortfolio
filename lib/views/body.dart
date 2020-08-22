@@ -27,6 +27,11 @@ class BodyScreen extends StatelessWidget {
                 ProjectShowcase(title: "NowNews"),
                 ProjectShowcase(title: "uBeatCS"),
               ],
+              height: 170,
+              enlargeCenterPage: true,
+              viewportFraction: context.isMobile ? 0.75 : 0.4,
+              autoPlay: true,
+              autoPlayAnimationDuration: 2.seconds,
             ),
           )
         ],
