@@ -21,30 +21,36 @@ class BodyScreen extends StatelessWidget {
           Expanded(
             child: VxSwiper(
               items: [
-                "Fantasker"
-                    .text
-                    .bold
-                    .white
-                    .xl
-                    .wide
-                    .center
-                    .make()
-                    .box
-                    .p8
-                    .roundedLg
-                    .alignCenter
-                    .square(200)
-                    .neumorphic(
-                        color: Vx.purple700,
-                        elevation: 5.0,
-                        curve: VxCurve.flat)
-                    .make()
-                    .p16(),
+                ProjectShowcase(title: "Fantasker"),
+                ProjectShowcase(title: "QuizR"),
+                ProjectShowcase(title: "Advise.me"),
+                ProjectShowcase(title: "NowNews"),
+                ProjectShowcase(title: "uBeatCS"),
               ],
             ),
           )
         ],
       ).p64().h(context.isMobile ? 500 : 300),
     );
+  }
+}
+
+class ProjectShowcase extends StatelessWidget {
+  final String title;
+
+  const ProjectShowcase({Key key, @required this.title}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return title.text.bold.white.xl.wide.center
+        .make()
+        .box
+        .p8
+        .roundedLg
+        .alignCenter
+        .square(200)
+        .neumorphic(color: Vx.purple700, elevation: 5.0, curve: VxCurve.flat)
+        .make()
+        .p16();
   }
 }
