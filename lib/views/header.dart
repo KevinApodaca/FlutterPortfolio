@@ -21,12 +21,13 @@ class Header extends StatelessWidget {
         .shimmer();
     return SafeArea(
       child: VxBox(
-          child: VStack([
+              child: VStack([
         ZStack([
           ProfilePicture(),
           Row(
             children: [
               VStack([
+                if (context.isMobile) 50.heightBox else 10.heightBox,
                 MyAppBar(),
                 30.heightBox,
                 myName,
@@ -48,9 +49,12 @@ class Header extends StatelessWidget {
                 ),
               )
             ],
-          )
+          ).w(context.screenWidth)
         ]),
-      ])).make(),
+      ]))
+          .size(context.screenWidth, context.percentHeight * 60)
+          .color(Const.secondaryColor)
+          .make(),
     );
   }
 }
