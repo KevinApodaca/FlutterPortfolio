@@ -3,6 +3,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 import '../const.dart';
 import 'body.dart';
+import 'footer.dart';
 import 'header.dart';
 
 class Home extends StatelessWidget {
@@ -14,6 +15,7 @@ class Home extends StatelessWidget {
         Header(),
         if (context.isMobile) MyIntro().p16(),
         BodyScreen(),
+        Footer(),
       ]).scrollVertical(),
     );
   }
