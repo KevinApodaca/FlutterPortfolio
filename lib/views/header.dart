@@ -34,7 +34,30 @@ class Header extends StatelessWidget {
                 VxBox().color(Const.accentColor).size(60, 10).make(),
                 30.heightBox,
                 SocialMedia(),
-              ])
+              ]).pSymmetric(
+                h: context.percentWidth * 10,
+                v: 32,
+              ),
+              Expanded(
+                child: VStack([
+                  "- Introduction".text.gray500.widest.sm.make(),
+                  10.heightBox,
+                  "Developer | Thinker | Maker | Educator \nWeb Developer"
+                      .text
+                      .white
+                      .xl3
+                      .maxLines(5)
+                      .make()
+                      .w(context.isMobile
+                          ? context.screenWidth
+                          : context.percentWidth * 40),
+                  20.heightBox,
+                  RaisedButton(
+                    onPressed: () {},
+                    child: "Check out my site".text.make(),
+                  )
+                ]),
+              )
             ],
           )
         ]),
@@ -72,12 +95,15 @@ class SocialMedia extends StatelessWidget {
       Icon(AntDesign.github, color: Colors.white).mdClick(() {
         launch('https://github.com/KevinApodaca');
       }).make(),
+      20.widthBox,
       Icon(AntDesign.linkedin_square, color: Colors.white).mdClick(() {
         launch('https://www.linkedin.com/in/kevinapodaca7/');
       }).make(),
+      20.widthBox,
       Icon(AntDesign.github, color: Colors.white).mdClick(() {
         launch('https://github.com/KevinApodaca');
       }).make(),
+      20.widthBox,
     ].hStack();
   }
 }
