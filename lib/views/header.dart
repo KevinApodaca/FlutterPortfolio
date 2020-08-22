@@ -39,29 +39,52 @@ class Header extends StatelessWidget {
                 v: 32,
               ),
               Expanded(
-                child: VStack([
-                  "- Introduction".text.gray500.widest.sm.make(),
-                  10.heightBox,
-                  "Developer | Thinker | Maker | Educator \nWeb Developer"
-                      .text
-                      .white
-                      .xl3
-                      .maxLines(5)
-                      .make()
-                      .w(context.isMobile
-                          ? context.screenWidth
-                          : context.percentWidth * 40),
-                  20.heightBox,
-                  RaisedButton(
-                    onPressed: () {},
-                    child: "Check out my site".text.make(),
-                  )
-                ]),
+                child: VxResponsive(
+                  fallback: const Offstage(),
+                  medium:
+                      MyIntro().pOnly(left: 120).h(context.percentHeight * 60),
+                  large:
+                      MyIntro().pOnly(left: 120).h(context.percentHeight * 60),
+                ),
               )
             ],
           )
         ]),
       ])).make(),
+    );
+  }
+}
+
+class MyIntro extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return VStack(
+      [
+        [
+          "- Introduction".text.gray500.widest.sm.make(),
+          10.heightBox,
+          "Developer | Thinker | Maker | Educator \nWeb Developer"
+              .text
+              .white
+              .xl3
+              .maxLines(5)
+              .make()
+              .w(context.isMobile
+                  ? context.screenWidth
+                  : context.percentWidth * 40),
+          20.heightBox,
+        ].vStack(),
+        RaisedButton(
+          onPressed: () {
+            launch("https://kevinapodaca.github.io");
+          },
+          child: "Check out my site".text.make(),
+          color: Const.accentColor,
+          shape: Vx.roundedSm,
+          hoverColor: Vx.purple700,
+        ).h(50)
+      ],
+      alignment: MainAxisAlignment.spaceEvenly,
     );
   }
 }
