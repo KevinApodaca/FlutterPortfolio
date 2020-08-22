@@ -18,6 +18,8 @@ This is a app to get started with Flutter for web and see its current developmen
   <img src = "Artboard.png" width=700>
 </p>
 
-## Responsive Design
+A live demo can be seen [here](https://kevinflutterportfolio.web.app/#/).
 
-I tried to build responsive layout using flutter components. It seems to be workable.
+### Responsive Design
+
+I tried to build responsive layout using flutter components. It seems to be workable but there are some things that do not function properly. Image scaling being an example
